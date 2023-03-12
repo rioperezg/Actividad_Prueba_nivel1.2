@@ -64,7 +64,19 @@ class Polinomio(object):
                 pol2 = pol2.sig
                 pol1 = pol1.sig 
         return paux   
-    def eliminar_termino(): 
+    def eliminar_termino(polinomio, termino, valor): 
+        aux = Nodo()
+        dato = datoPolinomio(valor,termino)
+        aux.info = dato
+        if(termino == polinomio.grado):
+            aux.sig = polinomio.termino_mayor
+            polinomio.termino_mayor = aux
+            polinomio.grado = termino
+            aux.info = ''
+        else:
+            print("No hay polinomio con este grado")
+            
+            
 
 
 """"
